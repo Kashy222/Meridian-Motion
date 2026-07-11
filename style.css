@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+@theme {
+  --color-olive-500: #7a945b;
+  --color-olive-600: #6e8b52;
+  --color-olive-700: #57703e;
+  --color-leaf-400: #dceba6;
+  --color-leaf-500: #d2e59e;
+  --color-leaf-600: #b4cc73;
+  --color-sand-50: #fbfbf9;
+  --color-sand-100: #f5f4f0;
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Inter", sans-serif;
+}
+
+@layer base {
+  body {
+    @apply font-sans bg-sand-50 text-gray-800 antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif text-olive-700;
+  }
+}

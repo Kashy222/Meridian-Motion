@@ -1,0 +1,1 @@
+@keyframes mmlayout-animation-push{50%{transform:scale(.8)}100%{transform:scale(1)}}.mmlayout-animation-push:active,.mmlayout-animation-push:focus,.mmlayout-animation-push:hover{animation-name:mmlayout-animation-push;animation-duration:.3s;animation-timing-function:linear;animation-iteration-count:1}
