@@ -169,6 +169,73 @@ body, p, .mmlayout-text-editor {
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/main-bundle.css" media="all">
+    <style id="custom-service-cards-style">
+    /* Reduce spacing between headers and body text */
+    .mmlayout-element-8df1ea8 > .e-con .mmlayout-widget-text-editor,
+    .mmlayout-element-ff576f9 > .e-con .mmlayout-widget-text-editor {
+        margin-top: -10px !important;
+    }
+
+    /* Normal state: Light bg, Dark text, Green button with White arrow */
+    .mmlayout-element-8df1ea8 > .e-con,
+    .mmlayout-element-ff576f9 > .e-con {
+        background-color: #f5f4f0 !important;
+        box-shadow: none !important;
+        transition: all 0.3s ease !important;
+        padding-top: 10px !important;
+        padding-bottom: 20px !important;
+    }
+
+    .mmlayout-element-8df1ea8 > .e-con .mmlayout-icon-box-title span,
+    .mmlayout-element-ff576f9 > .e-con .mmlayout-icon-box-title span,
+    .mmlayout-element-8df1ea8 > .e-con .mmlayout-widget-text-editor p,
+    .mmlayout-element-ff576f9 > .e-con .mmlayout-widget-text-editor p {
+        color: #1a1a1a !important;
+        transition: color 0.3s ease !important;
+    }
+
+    .mmlayout-element-8df1ea8 > .e-con .mmlayout-icon,
+    .mmlayout-element-ff576f9 > .e-con .mmlayout-icon {
+        background-color: #6e8b52 !important;
+        border-radius: 50% !important;
+        border: none !important;
+        outline: none !important;
+        transition: all 0.3s ease !important;
+    }
+
+    .mmlayout-element-8df1ea8 > .e-con .mmlayout-icon i,
+    .mmlayout-element-ff576f9 > .e-con .mmlayout-icon i {
+        color: #ffffff !important;
+        transition: color 0.3s ease !important;
+    }
+
+    /* HOVER state: Green bg, White text, Transparent button with White arrow */
+    .mmlayout-element-8df1ea8 > .e-con:hover,
+    .mmlayout-element-ff576f9 > .e-con:hover {
+        background-color: #6e8b52 !important;
+        box-shadow: none !important;
+    }
+
+    .mmlayout-element-8df1ea8 > .e-con:hover .mmlayout-icon-box-title span,
+    .mmlayout-element-ff576f9 > .e-con:hover .mmlayout-icon-box-title span,
+    .mmlayout-element-8df1ea8 > .e-con:hover .mmlayout-widget-text-editor p,
+    .mmlayout-element-ff576f9 > .e-con:hover .mmlayout-widget-text-editor p {
+        color: #ffffff !important;
+    }
+
+    .mmlayout-element-8df1ea8 > .e-con:hover .mmlayout-icon,
+    .mmlayout-element-ff576f9 > .e-con:hover .mmlayout-icon {
+        background-color: transparent !important;
+        border-color: transparent !important;
+        box-shadow: none !important;
+        outline: none !important;
+    }
+
+    .mmlayout-element-8df1ea8 > .e-con:hover .mmlayout-icon i,
+    .mmlayout-element-ff576f9 > .e-con:hover .mmlayout-icon i {
+        color: #ffffff !important;
+    }
+    </style>
 </head>
 
 <body class="wp-singular envato_tk_templates-template envato_tk_templates-template-mmlayout_header_footer single single-envato_tk_templates postid-1418 wp-theme-hello-mmlayout ehf-header ehf-footer ehf-template-hello-mmlayout ehf-stylesheet-hello-mmlayout qodef-qi--no-touch qi-addons-for-mmlayout-1.9.2 mkit-color-scheme mmlayout-default mmlayout-template-full-width mmlayout-kit-3 mmlayout-page mmlayout-page-1418">
@@ -421,7 +488,7 @@ body, p, .mmlayout-text-editor {
 
 									<h3 class="mmlayout-icon-box-title">
 						<span>
-							Dry Needling & Manual Therapy						</span>
+							Dry Needling &<br> Manual Therapy						</span>
 					</h3>
 				
 				
@@ -455,7 +522,7 @@ body, p, .mmlayout-text-editor {
 
 									<h3 class="mmlayout-icon-box-title">
 						<span>
-							Post-Surgical Rehab						</span>
+							Post-Surgical<br> Rehab						</span>
 					</h3>
 				
 				
