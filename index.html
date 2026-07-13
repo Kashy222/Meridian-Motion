@@ -198,22 +198,39 @@ body, p, .mmlayout-text-editor {
         margin-top: -10px !important;
     }
 
+    /* Force subtext to be exactly 2 lines for perfect consistency */
+    .mmlayout-element-8df1ea8 > .e-con .mmlayout-widget-text-editor p,
+    .mmlayout-element-ff576f9 > .e-con .mmlayout-widget-text-editor p {
+        display: -webkit-box !important;
+        -webkit-line-clamp: 2 !important;
+        -webkit-box-orient: vertical !important;
+        overflow: hidden !important;
+        min-height: 48px !important;
+        color: #1a1a1a !important;
+        transition: color 200ms cubic-bezier(0.23, 1, 0.32, 1) !important;
+    }
+
     /* Normal state: Light bg, Dark text, Green button with White arrow */
     .mmlayout-element-8df1ea8 > .e-con,
     .mmlayout-element-ff576f9 > .e-con {
         background-color: #f5f4f0 !important;
         box-shadow: none !important;
-        transition: all 0.3s ease !important;
+        transition: background-color 200ms cubic-bezier(0.23, 1, 0.32, 1), transform 200ms cubic-bezier(0.23, 1, 0.32, 1) !important;
         padding-top: 10px !important;
         padding-bottom: 20px !important;
+        will-change: transform, background-color;
+    }
+
+    /* Responsive feel on click (Emil Skill) */
+    .mmlayout-element-8df1ea8 > .e-con:active,
+    .mmlayout-element-ff576f9 > .e-con:active {
+        transform: scale(0.98) !important;
     }
 
     .mmlayout-element-8df1ea8 > .e-con .mmlayout-icon-box-title span,
-    .mmlayout-element-ff576f9 > .e-con .mmlayout-icon-box-title span,
-    .mmlayout-element-8df1ea8 > .e-con .mmlayout-widget-text-editor p,
-    .mmlayout-element-ff576f9 > .e-con .mmlayout-widget-text-editor p {
+    .mmlayout-element-ff576f9 > .e-con .mmlayout-icon-box-title span {
         color: #1a1a1a !important;
-        transition: color 0.3s ease !important;
+        transition: color 200ms cubic-bezier(0.23, 1, 0.32, 1) !important;
     }
 
     .mmlayout-element-8df1ea8 > .e-con .mmlayout-icon,
@@ -222,20 +239,25 @@ body, p, .mmlayout-text-editor {
         border-radius: 50% !important;
         border: none !important;
         outline: none !important;
-        transition: all 0.3s ease !important;
+        transition: background-color 200ms cubic-bezier(0.23, 1, 0.32, 1), transform 160ms ease-out !important;
+    }
+
+    /* Button scale down on press */
+    .mmlayout-element-8df1ea8 > .e-con .mmlayout-icon:active,
+    .mmlayout-element-ff576f9 > .e-con .mmlayout-icon:active {
+        transform: scale(0.92) !important;
     }
 
     .mmlayout-element-8df1ea8 > .e-con .mmlayout-icon i,
     .mmlayout-element-ff576f9 > .e-con .mmlayout-icon i {
         color: #ffffff !important;
-        transition: color 0.3s ease !important;
+        transition: color 200ms cubic-bezier(0.23, 1, 0.32, 1) !important;
     }
 
     /* HOVER state: Green bg, White text, Transparent button with White arrow */
     .mmlayout-element-8df1ea8 > .e-con:hover,
     .mmlayout-element-ff576f9 > .e-con:hover {
         background-color: #6e8b52 !important;
-        box-shadow: none !important;
     }
 
     .mmlayout-element-8df1ea8 > .e-con:hover .mmlayout-icon-box-title span,
@@ -249,8 +271,6 @@ body, p, .mmlayout-text-editor {
     .mmlayout-element-ff576f9 > .e-con:hover .mmlayout-icon {
         background-color: transparent !important;
         border-color: transparent !important;
-        box-shadow: none !important;
-        outline: none !important;
     }
 
     .mmlayout-element-8df1ea8 > .e-con:hover .mmlayout-icon i,
@@ -487,7 +507,7 @@ body, p, .mmlayout-text-editor {
 				</div>
 				<div class="mmlayout-element mmlayout-element-1623708 mmlayout-widget mmlayout-widget-text-editor" data-id="1623708" data-element_type="widget" data-widget_type="text-editor.default">
 				<div class="mmlayout-widget-container">
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>								</div>
+									<p>Dedicated to restoring your motion and balancing your energy.</p>								</div>
 				</div>
 				</div>
 		<div class="mmlayout-element mmlayout-element-bd947d0 e-con-full e-flex e-con e-child" data-id="bd947d0" data-element_type="container">
@@ -515,7 +535,7 @@ body, p, .mmlayout-text-editor {
 				</div>
 				<div class="mmlayout-element mmlayout-element-dd6d9e5 mmlayout-widget mmlayout-widget-text-editor" data-id="dd6d9e5" data-element_type="widget" data-widget_type="text-editor.default">
 				<div class="mmlayout-widget-container">
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>								</div>
+									<p>Dedicated to restoring your motion and balancing your energy.</p>								</div>
 				</div>
 				</div>
 		<div class="mmlayout-element mmlayout-element-ad47b98 e-con-full e-flex e-con e-child" data-id="ad47b98" data-element_type="container">
@@ -543,7 +563,7 @@ body, p, .mmlayout-text-editor {
 				</div>
 				<div class="mmlayout-element mmlayout-element-68aed09 mmlayout-widget mmlayout-widget-text-editor" data-id="68aed09" data-element_type="widget" data-widget_type="text-editor.default">
 				<div class="mmlayout-widget-container">
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>								</div>
+									<p>Dedicated to restoring your motion and balancing your energy.</p>								</div>
 				</div>
 				</div>
 		<div class="mmlayout-element mmlayout-element-d7e8138 e-con-full e-flex e-con e-child" data-id="d7e8138" data-element_type="container">
@@ -571,7 +591,7 @@ body, p, .mmlayout-text-editor {
 				</div>
 				<div class="mmlayout-element mmlayout-element-3ba1f6c mmlayout-widget mmlayout-widget-text-editor" data-id="3ba1f6c" data-element_type="widget" data-widget_type="text-editor.default">
 				<div class="mmlayout-widget-container">
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>								</div>
+									<p>Dedicated to restoring your motion and balancing your energy.</p>								</div>
 				</div>
 				</div>
 					</div>
@@ -672,7 +692,7 @@ body, p, .mmlayout-text-editor {
 		<div class="qodef-m-content">
 					<h3 class="qodef-m-title">
 					Mission Statement			</h3>
-			<p class="qodef-m-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+			<p class="qodef-m-text">We provide expert care to restore your mobility and improve your quality of life. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 	</div>
 		</div>
 				</div>
@@ -719,7 +739,7 @@ body, p, .mmlayout-text-editor {
 		<div class="mmlayout-element mmlayout-element-b2dbb8e e-con-full e-flex e-con e-child" data-id="b2dbb8e" data-element_type="container">
 				<div class="mmlayout-element mmlayout-element-97ec503 mmlayout-widget__width-initial mmlayout-widget mmlayout-widget-text-editor" data-id="97ec503" data-element_type="widget" data-widget_type="text-editor.default">
 				<div class="mmlayout-widget-container">
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>								</div>
+									<p>Our personalized treatment plans are designed to help you achieve optimal physical health.</p>								</div>
 				</div>
 				<div class="mmlayout-element mmlayout-element-311199a mmlayout-widget-mobile__width-inherit mmlayout-widget mmlayout-widget-qi_addons_for_mmlayout_button" data-id="311199a" data-element_type="widget" data-settings="{&amp;quot;_animation_mobile&amp;quot;:&amp;quot;none&amp;quot;}" data-widget_type="qi_addons_for_mmlayout_button.default">
 				<div class="mmlayout-widget-container">
@@ -761,7 +781,7 @@ body, p, .mmlayout-text-editor {
 				</div>
 				<div class="mmlayout-element mmlayout-element-e71995a mmlayout-widget mmlayout-widget-text-editor" data-id="e71995a" data-element_type="widget" data-widget_type="text-editor.default">
 				<div class="mmlayout-widget-container">
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>								</div>
+									<p>Experience compassionate care aimed at treating the root cause of your pain.</p>								</div>
 				</div>
 				</div>
 				<div class="mmlayout-element mmlayout-element-fa75beb mmlayout-widget mmlayout-widget-image" data-id="fa75beb" data-element_type="widget" data-widget_type="image.default">
@@ -795,7 +815,7 @@ body, p, .mmlayout-text-editor {
 				</div>
 				<div class="mmlayout-element mmlayout-element-548bb54 mmlayout-widget mmlayout-widget-text-editor" data-id="548bb54" data-element_type="widget" data-widget_type="text-editor.default">
 				<div class="mmlayout-widget-container">
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>								</div>
+									<p>Empowering you to live a pain-free life through advanced physiotherapeutic techniques.</p>								</div>
 				</div>
 				</div>
 				<div class="mmlayout-element mmlayout-element-4c1be1c mmlayout-widget mmlayout-widget-image" data-id="4c1be1c" data-element_type="widget" data-widget_type="image.default">
@@ -829,7 +849,7 @@ body, p, .mmlayout-text-editor {
 				</div>
 				<div class="mmlayout-element mmlayout-element-657e1d4 mmlayout-widget mmlayout-widget-text-editor" data-id="657e1d4" data-element_type="widget" data-widget_type="text-editor.default">
 				<div class="mmlayout-widget-container">
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>								</div>
+									<p>Dedicated to your well-being, we use evidence-based practices for effective recovery.</p>								</div>
 				</div>
 				</div>
 				<div class="mmlayout-element mmlayout-element-9d3de8c mmlayout-widget mmlayout-widget-image" data-id="9d3de8c" data-element_type="widget" data-widget_type="image.default">
@@ -863,7 +883,7 @@ body, p, .mmlayout-text-editor {
 				</div>
 				<div class="mmlayout-element mmlayout-element-8e81748 mmlayout-widget mmlayout-widget-text-editor" data-id="8e81748" data-element_type="widget" data-widget_type="text-editor.default">
 				<div class="mmlayout-widget-container">
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>								</div>
+									<p>We provide expert care to restore your mobility and improve your quality of life.</p>								</div>
 				</div>
 				</div>
 				<div class="mmlayout-element mmlayout-element-330232c mmlayout-widget mmlayout-widget-image" data-id="330232c" data-element_type="widget" data-widget_type="image.default">
@@ -897,7 +917,7 @@ body, p, .mmlayout-text-editor {
 				</div>
 				<div class="mmlayout-element mmlayout-element-b3a5e64 mmlayout-widget mmlayout-widget-text-editor" data-id="b3a5e64" data-element_type="widget" data-widget_type="text-editor.default">
 				<div class="mmlayout-widget-container">
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>								</div>
+									<p>Our personalized treatment plans are designed to help you achieve optimal physical health.</p>								</div>
 				</div>
 				</div>
 				<div class="mmlayout-element mmlayout-element-d8e61b0 mmlayout-widget mmlayout-widget-image" data-id="d8e61b0" data-element_type="widget" data-widget_type="image.default">
@@ -931,7 +951,7 @@ body, p, .mmlayout-text-editor {
 				</div>
 				<div class="mmlayout-element mmlayout-element-5406720 mmlayout-widget mmlayout-widget-text-editor" data-id="5406720" data-element_type="widget" data-widget_type="text-editor.default">
 				<div class="mmlayout-widget-container">
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>								</div>
+									<p>Experience compassionate care aimed at treating the root cause of your pain.</p>								</div>
 				</div>
 				</div>
 				<div class="mmlayout-element mmlayout-element-d35a995 mmlayout-widget mmlayout-widget-image" data-id="d35a995" data-element_type="widget" data-widget_type="image.default">
@@ -964,7 +984,7 @@ body, p, .mmlayout-text-editor {
 		<div class="mmlayout-element mmlayout-element-e492776 e-con-full e-flex e-con e-child" data-id="e492776" data-element_type="container">
 				<div class="mmlayout-element mmlayout-element-45ba8dc mmlayout-widget__width-initial mmlayout-widget mmlayout-widget-text-editor" data-id="45ba8dc" data-element_type="widget" data-widget_type="text-editor.default">
 				<div class="mmlayout-widget-container">
-									<p>We are a dedicated husband-wife team, bringing together our specialized expertise in musculoskeletal, sports, and manual therapy. Whether through Dry Needling, CKTP, or personalized rehab programs, our combined specializations mean you get the most comprehensive care tailored just for you.</p>								</div>
+									<p>Our combined specializations mean you get the most comprehensive care tailored just for you.</p>								</div>
 				</div>
 				<div class="mmlayout-element mmlayout-element-9276046 mmlayout-widget-mobile__width-inherit mmlayout-widget mmlayout-widget-qi_addons_for_mmlayout_button" data-id="9276046" data-element_type="widget" data-settings="{&amp;quot;_animation_mobile&amp;quot;:&amp;quot;none&amp;quot;}" data-widget_type="qi_addons_for_mmlayout_button.default">
 				<div class="mmlayout-widget-container">
@@ -1005,7 +1025,7 @@ body, p, .mmlayout-text-editor {
 				</div>
 				<div class="mmlayout-element mmlayout-element-d943c88 mmlayout-widget mmlayout-widget-text-editor" data-id="d943c88" data-element_type="widget" data-widget_type="text-editor.default">
 				<div class="mmlayout-widget-container">
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>								</div>
+									<p>Empowering you to live a pain-free life through advanced physiotherapeutic techniques.</p>								</div>
 				</div>
 				</div>
 		<div class="mmlayout-element mmlayout-element-d4208f7 e-con-full e-flex e-con e-child" data-id="d4208f7" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
@@ -1033,7 +1053,7 @@ body, p, .mmlayout-text-editor {
 				</div>
 				<div class="mmlayout-element mmlayout-element-aefd0d6 mmlayout-widget mmlayout-widget-text-editor" data-id="aefd0d6" data-element_type="widget" data-widget_type="text-editor.default">
 				<div class="mmlayout-widget-container">
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>								</div>
+									<p>Dedicated to your well-being, we use evidence-based practices for effective recovery.</p>								</div>
 				</div>
 				</div>
 		<div class="mmlayout-element mmlayout-element-ce8db4a e-con-full e-flex e-con e-child" data-id="ce8db4a" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
@@ -1061,7 +1081,7 @@ body, p, .mmlayout-text-editor {
 				</div>
 				<div class="mmlayout-element mmlayout-element-2b00ac0 mmlayout-widget mmlayout-widget-text-editor" data-id="2b00ac0" data-element_type="widget" data-widget_type="text-editor.default">
 				<div class="mmlayout-widget-container">
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>								</div>
+									<p>We provide expert care to restore your mobility and improve your quality of life.</p>								</div>
 				</div>
 				</div>
 		<div class="mmlayout-element mmlayout-element-ea0b6bb e-con-full e-flex e-con e-child" data-id="ea0b6bb" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
@@ -1089,7 +1109,7 @@ body, p, .mmlayout-text-editor {
 				</div>
 				<div class="mmlayout-element mmlayout-element-500687c mmlayout-widget mmlayout-widget-text-editor" data-id="500687c" data-element_type="widget" data-widget_type="text-editor.default">
 				<div class="mmlayout-widget-container">
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>								</div>
+									<p>Our personalized treatment plans are designed to help you achieve optimal physical health.</p>								</div>
 				</div>
 				</div>
 				</div>
@@ -1117,7 +1137,7 @@ body, p, .mmlayout-text-editor {
 		<div class="mmlayout-element mmlayout-element-f3d5ca9 e-con-full e-flex e-con e-child" data-id="f3d5ca9" data-element_type="container">
 				<div class="mmlayout-element mmlayout-element-5a69a3a mmlayout-widget__width-initial mmlayout-widget mmlayout-widget-text-editor" data-id="5a69a3a" data-element_type="widget" data-widget_type="text-editor.default">
 				<div class="mmlayout-widget-container">
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>								</div>
+									<p>Experience compassionate care aimed at treating the root cause of your pain.</p>								</div>
 				</div>
 				<div class="mmlayout-element mmlayout-element-dea81ce mmlayout-widget-mobile__width-inherit mmlayout-widget mmlayout-widget-qi_addons_for_mmlayout_button" data-id="dea81ce" data-element_type="widget" data-settings="{&amp;quot;_animation_mobile&amp;quot;:&amp;quot;none&amp;quot;}" data-widget_type="qi_addons_for_mmlayout_button.default">
 				<div class="mmlayout-widget-container">
@@ -1218,7 +1238,7 @@ body, p, .mmlayout-text-editor {
 					</h5>
 				
 									<p class="mmlayout-icon-box-description">
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit.					</p>
+						Dedicated to restoring your motion and balancing your energy.</p>
 				
 			</div>
 			
@@ -1242,7 +1262,7 @@ body, p, .mmlayout-text-editor {
 					</h5>
 				
 									<p class="mmlayout-icon-box-description">
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit.					</p>
+						Dedicated to restoring your motion and balancing your energy.</p>
 				
 			</div>
 			
@@ -1266,7 +1286,7 @@ body, p, .mmlayout-text-editor {
 					</h5>
 				
 									<p class="mmlayout-icon-box-description">
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit.					</p>
+						Dedicated to restoring your motion and balancing your energy.</p>
 				
 			</div>
 			
@@ -1298,11 +1318,11 @@ body, p, .mmlayout-text-editor {
 		<div class="mmlayout-element mmlayout-element-e31265c e-con-full e-flex e-con e-child" data-id="e31265c" data-element_type="container">
 				<div class="mmlayout-element mmlayout-element-754517e mmlayout-widget__width-initial mmlayout-widget mmlayout-widget-text-editor" data-id="754517e" data-element_type="widget" data-widget_type="text-editor.default">
 				<div class="mmlayout-widget-container">
-									<p><strong>Address:</strong> 306, 3rd Floor, 9 Square Apartment, Sai Chowk, Near Khadakpada Circle, Kalyan (W) - 421301<br><br><strong>Phone:</strong> +91 9082277978</p>								</div>
+									<p style="margin-top: 45px;"><strong>Address:</strong> 306, 3rd Floor, 9 Square Apartment, Sai Chowk, Near Khadakpada Circle, Kalyan (W) - 421301</p>								</div>
 				</div>
-				<div class="mmlayout-element mmlayout-element-723815c mmlayout-widget-mobile__width-inherit mmlayout-widget mmlayout-widget-qi_addons_for_mmlayout_button" data-id="723815c" data-element_type="widget" data-settings="{&amp;quot;_animation_mobile&amp;quot;:&amp;quot;none&amp;quot;}" data-widget_type="qi_addons_for_mmlayout_button.default">
+				<div class="mmlayout-element mmlayout-element-723815c mmlayout-widget-mobile__width-inherit mmlayout-widget mmlayout-widget-qi_addons_for_mmlayout_button" data-id="723815c" data-element_type="widget" data-settings="{&amp;quot;_animation_mobile&amp;quot;:&amp;quot;none&amp;quot;}" data-widget_type="qi_addons_for_mmlayout_button.default" style="margin-top: auto;">
 				<div class="mmlayout-widget-container">
-					<a class="qodef-shortcode qodef-m qodef-qi-button qodef-html--link qodef-layout--outlined qodef-type--standard qodef-size--full qodef-hover--reveal qodef--reveal-vertical qodef-icon--right qodef-hover--icon-move-horizontal" href="/contact.html" target="_self">
+					<a class="qodef-shortcode qodef-m qodef-qi-button qodef-html--link qodef-layout--outlined qodef-type--standard qodef-size--full qodef-hover--reveal qodef--reveal-vertical qodef-icon--right qodef-hover--icon-move-horizontal" href="/contact.html" target="_self" style="white-space: nowrap;">
 	<span class="qodef-m-text">BOOK APPOINTMENT</span>
 		<span class="qodef-m-icon">
 		<span class="qodef-m-icon-inner">
@@ -1315,6 +1335,12 @@ body, p, .mmlayout-text-editor {
 				</div>
 				<div class="mmlayout-element mmlayout-element-84b51a6 mmlayout-widget mmlayout-widget-google_maps" data-id="84b51a6" data-element_type="widget" data-widget_type="google_maps.default">
 				<div class="mmlayout-widget-container">
+							<style>
+								.mmlayout-element-84b51a6 .mmlayout-custom-embed,
+								.mmlayout-element-84b51a6 .mmlayout-custom-embed iframe {
+									height: 320px !important;
+								}
+							</style>
 							<div class="mmlayout-custom-embed">
 			<iframe loading="lazy" src="https://maps.google.com/maps?q=Khadakpada%20Circle%2C%20Kalyan&amp;t=m&amp;z=14&amp;output=embed&amp;iwloc=near" title="Meridian Motion, Kalyan" aria-label="Meridian Motion, Kalyan"></iframe>
 		</div>
@@ -1328,7 +1354,7 @@ body, p, .mmlayout-text-editor {
 				</div>
 				<div class="mmlayout-element mmlayout-element-fc5a9f7 mmlayout-widget mmlayout-widget-heading" data-id="fc5a9f7" data-element_type="widget" data-widget_type="heading.default">
 				<div class="mmlayout-widget-container">
-					<h3 class="mmlayout-heading-title mmlayout-size-default">Mon to Sat: 08.00 - 20.00</h3>				</div>
+					<h3 class="mmlayout-heading-title mmlayout-size-default">Mon to Sat: 08:00 a.m. - 08:00 p.m.</h3>				</div>
 				</div>
 				</div>
 		<div class="mmlayout-element mmlayout-element-647a400 e-con-full e-flex e-con e-child" data-id="647a400" data-element_type="container" data-settings="{&amp;quot;background_background&amp;quot;:&amp;quot;classic&amp;quot;,&amp;quot;animation_mobile&amp;quot;:&amp;quot;none&amp;quot;}">
@@ -1384,7 +1410,7 @@ Hope from Our Patients</h2>				</div>
 		<div class="mmlayout-element mmlayout-element-0b988fa e-con-full e-flex e-con e-child" data-id="0b988fa" data-element_type="container">
 				<div class="mmlayout-element mmlayout-element-931bf3e mmlayout-widget__width-initial mmlayout-widget mmlayout-widget-text-editor" data-id="931bf3e" data-element_type="widget" data-widget_type="text-editor.default">
 				<div class="mmlayout-widget-container">
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>								</div>
+									<p>Empowering you to live a pain-free life through advanced physiotherapeutic techniques.</p>								</div>
 				</div>
 				<div class="mmlayout-element mmlayout-element-5d06e58 mmlayout-widget-mobile__width-inherit mmlayout-widget mmlayout-widget-qi_addons_for_mmlayout_button" data-id="5d06e58" data-element_type="widget" data-settings="{&amp;quot;_animation_mobile&amp;quot;:&amp;quot;none&amp;quot;}" data-widget_type="qi_addons_for_mmlayout_button.default">
 				<div class="mmlayout-widget-container">
@@ -1515,7 +1541,7 @@ Hope from Our Patients</h2>				</div>
 				</div>
 				<div class="mmlayout-element mmlayout-element-ed005d0 mmlayout-widget__width-initial mmlayout-widget-mobile__width-inherit mmlayout-widget mmlayout-widget-text-editor" data-id="ed005d0" data-element_type="widget" data-widget_type="text-editor.default">
 				<div class="mmlayout-widget-container">
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>								</div>
+									<p>Dedicated to your well-being, we use evidence-based practices for effective recovery.</p>								</div>
 				</div>
 				<div class="mmlayout-element mmlayout-element-b67d636 mmlayout-widget-mobile__width-inherit mmlayout-widget mmlayout-widget-qi_addons_for_mmlayout_button" data-id="b67d636" data-element_type="widget" data-settings="{&amp;quot;_animation_mobile&amp;quot;:&amp;quot;none&amp;quot;}" data-widget_type="qi_addons_for_mmlayout_button.default">
 				<div class="mmlayout-widget-container">
@@ -1554,7 +1580,7 @@ Hope from Our Patients</h2>				</div>
 		<div class="mmlayout-element mmlayout-element-9dcbb8f e-con-full e-flex e-con e-child" data-id="9dcbb8f" data-element_type="container">
 				<div class="mmlayout-element mmlayout-element-373f829 mmlayout-widget mmlayout-widget-text-editor" data-id="373f829" data-element_type="widget" data-widget_type="text-editor.default">
 				<div class="mmlayout-widget-container">
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>								</div>
+									<p>We provide expert care to restore your mobility and improve your quality of life.</p>								</div>
 				</div>
 				</div>
 				</div>
@@ -1589,7 +1615,7 @@ Hope from Our Patients</h2>				</div>
                     <div id="Collapse-16431ec6a3a1903144ae" class=" show collapse" aria-labelledby="primaryHeading-0-17cbd7e" data-parent="#accordion-6a3a1903144ae">
 
                         <div class="elementskit-card-body ekit-accordion--content">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.</p>                        </div>
+                            <p>Our clinic is equipped with the latest therapeutic technologies to ensure you receive the most effective care possible. From targeted manual therapy and dry needling to specialized post-surgical rehabilitation programs, we cover all aspects of physical recovery. We understand that every patient is unique, which is why we take the time to listen, assess, and guide you through every step of your healing process. Your health and comfort are our top priorities.</p>                        </div>
 
                     </div>
 
@@ -1620,7 +1646,7 @@ Hope from Our Patients</h2>				</div>
                     <div id="Collapse-d46e1ca6a3a1903144ae" class=" collapse" aria-labelledby="primaryHeading-1-17cbd7e" data-parent="#accordion-6a3a1903144ae">
 
                         <div class="elementskit-card-body ekit-accordion--content">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.</p>                        </div>
+                            <p>Our clinic is equipped with the latest therapeutic technologies to ensure you receive the most effective care possible. From targeted manual therapy and dry needling to specialized post-surgical rehabilitation programs, we cover all aspects of physical recovery. We understand that every patient is unique, which is why we take the time to listen, assess, and guide you through every step of your healing process. Your health and comfort are our top priorities.</p>                        </div>
 
                     </div>
 
@@ -1651,7 +1677,7 @@ Hope from Our Patients</h2>				</div>
                     <div id="Collapse-1c798a36a3a1903144ae" class=" collapse" aria-labelledby="primaryHeading-2-17cbd7e" data-parent="#accordion-6a3a1903144ae">
 
                         <div class="elementskit-card-body ekit-accordion--content">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.</p>                        </div>
+                            <p>Our clinic is equipped with the latest therapeutic technologies to ensure you receive the most effective care possible. From targeted manual therapy and dry needling to specialized post-surgical rehabilitation programs, we cover all aspects of physical recovery. We understand that every patient is unique, which is why we take the time to listen, assess, and guide you through every step of your healing process. Your health and comfort are our top priorities.</p>                        </div>
 
                     </div>
 
@@ -1682,7 +1708,7 @@ Hope from Our Patients</h2>				</div>
                     <div id="Collapse-d418ae26a3a1903144ae" class=" collapse" aria-labelledby="primaryHeading-3-17cbd7e" data-parent="#accordion-6a3a1903144ae">
 
                         <div class="elementskit-card-body ekit-accordion--content">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.</p>                        </div>
+                            <p>Our clinic is equipped with the latest therapeutic technologies to ensure you receive the most effective care possible. From targeted manual therapy and dry needling to specialized post-surgical rehabilitation programs, we cover all aspects of physical recovery. We understand that every patient is unique, which is why we take the time to listen, assess, and guide you through every step of your healing process. Your health and comfort are our top priorities.</p>                        </div>
 
                     </div>
 
@@ -1716,7 +1742,7 @@ Hope from Our Patients</h2>				</div>
 		<div class="mmlayout-element mmlayout-element-a680667 e-con-full e-flex e-con e-child" data-id="a680667" data-element_type="container">
 				<div class="mmlayout-element mmlayout-element-6c81d57 mmlayout-widget__width-initial mmlayout-widget mmlayout-widget-text-editor" data-id="6c81d57" data-element_type="widget" data-widget_type="text-editor.default">
 				<div class="mmlayout-widget-container">
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>								</div>
+									<p>Our personalized treatment plans are designed to help you achieve optimal physical health.</p>								</div>
 				</div>
 				<div class="mmlayout-element mmlayout-element-bb7d42e mmlayout-widget-mobile__width-inherit mmlayout-widget mmlayout-widget-qi_addons_for_mmlayout_button" data-id="bb7d42e" data-element_type="widget" data-settings="{&amp;quot;_animation_mobile&amp;quot;:&amp;quot;none&amp;quot;}" data-widget_type="qi_addons_for_mmlayout_button.default">
 				<div class="mmlayout-widget-container">
@@ -1735,7 +1761,7 @@ Hope from Our Patients</h2>				</div>
 				<div class="mmlayout-widget-container">
 					<div class="qodef-shortcode qodef-m qodef-addons-blog-list qodef--list qodef-info-no-icons qodef-image--hover-move qodef-qi-grid qodef-layout--qi-columns qodef-col-num--3 qodef-item-layout--standard qodef-responsive--predefined">
 	<div class="qodef-grid-inner">
-		<article class="qodef-e qodef-blog-item qodef-grid-item qodef-item--full post-1196 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized tag-blog tag-ipsum tag-lorem tag-post tag-seo">
+		<article class="qodef-e qodef-blog-item qodef-grid-item qodef-item--full post-1196 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized tag-blog tag-post tag-seo">
 	<div class="qodef-e-inner">
 		<div class="qodef-e-media">
 		<div class="qodef-e-media-image">
@@ -1750,7 +1776,7 @@ Hope from Our Patients</h2>				</div>
 		7 Signs Your Body Needs Physiotherapy Soon	</a>
 </h5>
 		<p itemprop="description" class="qodef-e-excerpt">
-			Home Single Post Single Post 7 Signs Your Body Needs Physiotherapy Soon 10 July 2025 Lorem ipsum dolor sit amet consectetur a		</p>
+			Home Single Post Single Post 7 Signs Your Body Needs Physiotherapy Soon 10 July 2025 Dedicated to restoring your motion and balancing your energy.</p>
 				</div>
 					</div>
 	</div>
@@ -1770,7 +1796,7 @@ Hope from Our Patients</h2>				</div>
 		What is Physiotherapy? A Complete Guide for Beginners	</a>
 </h5>
 		<p itemprop="description" class="qodef-e-excerpt">
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.		</p>
+			Experience compassionate care aimed at treating the root cause of your pain.		</p>
 				</div>
 					</div>
 	</div>
@@ -1790,7 +1816,7 @@ Hope from Our Patients</h2>				</div>
 		How to Reduce Back Pain Without Medication	</a>
 </h5>
 		<p itemprop="description" class="qodef-e-excerpt">
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.		</p>
+			Empowering you to live a pain-free life through advanced physiotherapeutic techniques.		</p>
 				</div>
 					</div>
 	</div>

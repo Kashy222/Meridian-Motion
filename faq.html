@@ -318,14 +318,26 @@ body, p, .mmlayout-text-editor {
 					<h2 class="mmlayout-heading-title mmlayout-size-default">Frequently Ask Question</h2>				</div>
 				</div>
 				</div>
-		<div class="mmlayout-element mmlayout-element-6185637 e-con-full e-flex e-con e-child" data-id="6185637" data-element_type="container">
-				<div class="mmlayout-element mmlayout-element-5039916 mmlayout-widget mmlayout-widget-text-editor" data-id="5039916" data-element_type="widget" data-widget_type="text-editor.default">
-				<div class="mmlayout-widget-container">
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>								</div>
-				</div>
-				</div>
+
 				</div>
 		<div class="mmlayout-element mmlayout-element-c15f61e e-con-full e-flex e-con e-child" data-id="c15f61e" data-element_type="container" data-settings="{&quot;animation_mobile&quot;:&quot;none&quot;}">
+				<style>
+					/* Force the FAQ container to stack accordions vertically instead of side-by-side */
+					.mmlayout-element-c15f61e {
+						flex-direction: column !important;
+					}
+					.mmlayout-element-c15f61e > .mmlayout-widget-elementskit-accordion {
+						width: 100% !important;
+						max-width: 100% !important;
+					}
+					
+					/* Update FAQ titles to match other card headers (28px, 600 weight) */
+					.ekit-accordion-title {
+						font-size: 28px !important;
+						font-weight: 600 !important;
+						line-height: 1.3 !important;
+					}
+				</style>
 				<div class="mmlayout-element mmlayout-element-82cb802 mmlayout-widget__width-inherit mmlayout-widget mmlayout-widget-elementskit-accordion" data-id="82cb802" data-element_type="widget" data-settings="{&amp;quot;_animation_mobile&amp;quot;:&amp;quot;none&amp;quot;}" data-widget_type="elementskit-accordion.default">
 				<div class="mmlayout-widget-container">
 					<div class="ekit-wid-con">
@@ -346,7 +358,7 @@ body, p, .mmlayout-text-editor {
 
                                     <div class="ekit_accordion_active_icon">
                                         <!-- Active Icon -->
-										<i class="jki jki-plus-solid"></i>                                    </div>
+										<i class="jki jki-minus-solid"></i>                                    </div>
                                 </div>
 
                             
@@ -377,7 +389,7 @@ body, p, .mmlayout-text-editor {
 
                                     <div class="ekit_accordion_active_icon">
                                         <!-- Active Icon -->
-										<i class="jki jki-plus-solid"></i>                                    </div>
+										<i class="jki jki-minus-solid"></i>                                    </div>
                                 </div>
 
                             
@@ -408,7 +420,7 @@ body, p, .mmlayout-text-editor {
 
                                     <div class="ekit_accordion_active_icon">
                                         <!-- Active Icon -->
-										<i class="jki jki-plus-solid"></i>                                    </div>
+										<i class="jki jki-minus-solid"></i>                                    </div>
                                 </div>
 
                             
@@ -439,7 +451,7 @@ body, p, .mmlayout-text-editor {
 
                                     <div class="ekit_accordion_active_icon">
                                         <!-- Active Icon -->
-										<i class="jki jki-plus-solid"></i>                                    </div>
+										<i class="jki jki-minus-solid"></i>                                    </div>
                                 </div>
 
                             
@@ -455,18 +467,10 @@ body, p, .mmlayout-text-editor {
 
                 </div><!-- .elementskit-card END -->
 
-                                        </div>
-    </div>				</div>
-				</div>
-				<div class="mmlayout-element mmlayout-element-a4715b8 mmlayout-widget__width-inherit mmlayout-widget mmlayout-widget-elementskit-accordion" data-id="a4715b8" data-element_type="widget" data-settings="{&amp;quot;_animation_mobile&amp;quot;:&amp;quot;none&amp;quot;}" data-widget_type="elementskit-accordion.default">
-				<div class="mmlayout-widget-container">
-					<div class="ekit-wid-con">
-        <div class="elementskit-accordion accoedion-primary" id="accordion-6a3a25c247255">
-
-            
-                <div class="elementskit-card active">
+                
+                <div class="elementskit-card ">
                     <div class="elementskit-card-header" id="primaryHeading-0-a4715b8">
-                        <a href="#collapse-16431ec6a3a25c247255" class="ekit-accordion--toggler elementskit-btn-link collapsed" data-ekit-toggle="collapse" data-target="#Collapse-16431ec6a3a25c247255" aria-expanded="true" aria-controls="Collapse-16431ec6a3a25c247255">
+                        <a href="#collapse-16431ec6a3a25c247255" class="ekit-accordion--toggler elementskit-btn-link collapsed" data-ekit-toggle="collapse" data-target="#Collapse-16431ec6a3a25c247255" aria-expanded="false" aria-controls="Collapse-16431ec6a3a25c247255">
                             
                             <span class="ekit-accordion-title">What conditions do you treat?</span>
 
@@ -478,14 +482,14 @@ body, p, .mmlayout-text-editor {
 
                                     <div class="ekit_accordion_active_icon">
                                         <!-- Active Icon -->
-										<i class="jki jki-plus-solid"></i>                                    </div>
+										<i class="jki jki-minus-solid"></i>                                    </div>
                                 </div>
 
                             
                                                     </a>
                     </div>
 
-                    <div id="Collapse-16431ec6a3a25c247255" class=" show collapse" aria-labelledby="primaryHeading-0-a4715b8" data-parent="#accordion-6a3a25c247255">
+                    <div id="Collapse-16431ec6a3a25c247255" class=" collapse" aria-labelledby="primaryHeading-0-a4715b8" data-parent="#accordion-6a3a25c246bf6">
 
                         <div class="elementskit-card-body ekit-accordion--content">
                             <p>We treat a wide range of musculoskeletal issues, sports injuries, post-surgical rehabilitation needs, and postural or ergonomic problems.</p>                        </div>
@@ -509,14 +513,14 @@ body, p, .mmlayout-text-editor {
 
                                     <div class="ekit_accordion_active_icon">
                                         <!-- Active Icon -->
-										<i class="jki jki-plus-solid"></i>                                    </div>
+										<i class="jki jki-minus-solid"></i>                                    </div>
                                 </div>
 
                             
                                                     </a>
                     </div>
 
-                    <div id="Collapse-d46e1ca6a3a25c247255" class=" collapse" aria-labelledby="primaryHeading-1-a4715b8" data-parent="#accordion-6a3a25c247255">
+                    <div id="Collapse-d46e1ca6a3a25c247255" class=" collapse" aria-labelledby="primaryHeading-1-a4715b8" data-parent="#accordion-6a3a25c246bf6">
 
                         <div class="elementskit-card-body ekit-accordion--content">
                             <p>Your first visit will include a comprehensive physical assessment, discussion of your medical history, and the development of a personalized treatment plan.</p>                        </div>
@@ -540,17 +544,17 @@ body, p, .mmlayout-text-editor {
 
                                     <div class="ekit_accordion_active_icon">
                                         <!-- Active Icon -->
-										<i class="jki jki-plus-solid"></i>                                    </div>
+										<i class="jki jki-minus-solid"></i>                                    </div>
                                 </div>
 
                             
                                                     </a>
                     </div>
 
-                    <div id="Collapse-1c798a36a3a25c247255" class=" collapse" aria-labelledby="primaryHeading-2-a4715b8" data-parent="#accordion-6a3a25c247255">
+                    <div id="Collapse-1c798a36a3a25c247255" class=" collapse" aria-labelledby="primaryHeading-2-a4715b8" data-parent="#accordion-6a3a25c246bf6">
 
                         <div class="elementskit-card-body ekit-accordion--content">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>                        </div>
+                            <p>We are committed to providing the highest standard of care in a comfortable and welcoming environment. Our goal is to help you recover faster and stronger.</p>                        </div>
 
                     </div>
 
@@ -571,17 +575,17 @@ body, p, .mmlayout-text-editor {
 
                                     <div class="ekit_accordion_active_icon">
                                         <!-- Active Icon -->
-										<i class="jki jki-plus-solid"></i>                                    </div>
+										<i class="jki jki-minus-solid"></i>                                    </div>
                                 </div>
 
                             
                                                     </a>
                     </div>
 
-                    <div id="Collapse-d418ae26a3a25c247255" class=" collapse" aria-labelledby="primaryHeading-3-a4715b8" data-parent="#accordion-6a3a25c247255">
+                    <div id="Collapse-d418ae26a3a25c247255" class=" collapse" aria-labelledby="primaryHeading-3-a4715b8" data-parent="#accordion-6a3a25c246bf6">
 
                         <div class="elementskit-card-body ekit-accordion--content">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>                        </div>
+                            <p>We are committed to providing the highest standard of care in a comfortable and welcoming environment. Our goal is to help you recover faster and stronger.</p>                        </div>
 
                     </div>
 
@@ -763,7 +767,7 @@ Choose to Heal with Us</h2>				</div>
 				</div>
 				<div class="mmlayout-element mmlayout-element-c1ed381 mmlayout-widget__width-initial mmlayout-widget-mobile__width-inherit mmlayout-widget mmlayout-widget-text-editor" data-id="c1ed381" data-element_type="widget" data-widget_type="text-editor.default">
 				<div class="mmlayout-widget-container">
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>								</div>
+									<p>Dedicated to your well-being, we use evidence-based practices for effective recovery.</p>								</div>
 				</div>
 				<div class="mmlayout-element mmlayout-element-5443042 mmlayout-widget-mobile__width-inherit mmlayout-widget mmlayout-widget-qi_addons_for_mmlayout_button" data-id="5443042" data-element_type="widget" data-settings="{&amp;quot;_animation_mobile&amp;quot;:&amp;quot;none&amp;quot;}" data-widget_type="qi_addons_for_mmlayout_button.default">
 				<div class="mmlayout-widget-container">

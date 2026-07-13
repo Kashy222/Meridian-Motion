@@ -176,22 +176,39 @@ body, p, .mmlayout-text-editor {
         margin-top: -10px !important;
     }
 
+    /* Force subtext to be exactly 2 lines for perfect consistency */
+    .mmlayout-element-8df1ea8 > .e-con .mmlayout-widget-text-editor p,
+    .mmlayout-element-ff576f9 > .e-con .mmlayout-widget-text-editor p {
+        display: -webkit-box !important;
+        -webkit-line-clamp: 2 !important;
+        -webkit-box-orient: vertical !important;
+        overflow: hidden !important;
+        min-height: 48px !important;
+        color: #1a1a1a !important;
+        transition: color 200ms cubic-bezier(0.23, 1, 0.32, 1) !important;
+    }
+
     /* Normal state: Light bg, Dark text, Green button with White arrow */
     .mmlayout-element-8df1ea8 > .e-con,
     .mmlayout-element-ff576f9 > .e-con {
         background-color: #f5f4f0 !important;
         box-shadow: none !important;
-        transition: all 0.3s ease !important;
+        transition: background-color 200ms cubic-bezier(0.23, 1, 0.32, 1), transform 200ms cubic-bezier(0.23, 1, 0.32, 1) !important;
         padding-top: 10px !important;
         padding-bottom: 20px !important;
+        will-change: transform, background-color;
+    }
+
+    /* Responsive feel on click (Emil Skill) */
+    .mmlayout-element-8df1ea8 > .e-con:active,
+    .mmlayout-element-ff576f9 > .e-con:active {
+        transform: scale(0.98) !important;
     }
 
     .mmlayout-element-8df1ea8 > .e-con .mmlayout-icon-box-title span,
-    .mmlayout-element-ff576f9 > .e-con .mmlayout-icon-box-title span,
-    .mmlayout-element-8df1ea8 > .e-con .mmlayout-widget-text-editor p,
-    .mmlayout-element-ff576f9 > .e-con .mmlayout-widget-text-editor p {
+    .mmlayout-element-ff576f9 > .e-con .mmlayout-icon-box-title span {
         color: #1a1a1a !important;
-        transition: color 0.3s ease !important;
+        transition: color 200ms cubic-bezier(0.23, 1, 0.32, 1) !important;
     }
 
     .mmlayout-element-8df1ea8 > .e-con .mmlayout-icon,
@@ -200,20 +217,25 @@ body, p, .mmlayout-text-editor {
         border-radius: 50% !important;
         border: none !important;
         outline: none !important;
-        transition: all 0.3s ease !important;
+        transition: background-color 200ms cubic-bezier(0.23, 1, 0.32, 1), transform 160ms ease-out !important;
+    }
+
+    /* Button scale down on press */
+    .mmlayout-element-8df1ea8 > .e-con .mmlayout-icon:active,
+    .mmlayout-element-ff576f9 > .e-con .mmlayout-icon:active {
+        transform: scale(0.92) !important;
     }
 
     .mmlayout-element-8df1ea8 > .e-con .mmlayout-icon i,
     .mmlayout-element-ff576f9 > .e-con .mmlayout-icon i {
         color: #ffffff !important;
-        transition: color 0.3s ease !important;
+        transition: color 200ms cubic-bezier(0.23, 1, 0.32, 1) !important;
     }
 
     /* HOVER state: Green bg, White text, Transparent button with White arrow */
     .mmlayout-element-8df1ea8 > .e-con:hover,
     .mmlayout-element-ff576f9 > .e-con:hover {
         background-color: #6e8b52 !important;
-        box-shadow: none !important;
     }
 
     .mmlayout-element-8df1ea8 > .e-con:hover .mmlayout-icon-box-title span,
@@ -227,8 +249,6 @@ body, p, .mmlayout-text-editor {
     .mmlayout-element-ff576f9 > .e-con:hover .mmlayout-icon {
         background-color: transparent !important;
         border-color: transparent !important;
-        box-shadow: none !important;
-        outline: none !important;
     }
 
     .mmlayout-element-8df1ea8 > .e-con:hover .mmlayout-icon i,
@@ -389,7 +409,7 @@ body, p, .mmlayout-text-editor {
 		<div class="mmlayout-element mmlayout-element-e837913 e-con-full e-flex e-con e-child" data-id="e837913" data-element_type="container">
 				<div class="mmlayout-element mmlayout-element-b1b8595 mmlayout-widget__width-initial mmlayout-widget mmlayout-widget-text-editor" data-id="b1b8595" data-element_type="widget" data-widget_type="text-editor.default">
 				<div class="mmlayout-widget-container">
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>								</div>
+									<p>Dedicated to your well-being, we use evidence-based practices for effective recovery.</p>								</div>
 				</div>
 				<div class="mmlayout-element mmlayout-element-85eab1b mmlayout-widget-mobile__width-inherit mmlayout-widget mmlayout-widget-qi_addons_for_mmlayout_button" data-id="85eab1b" data-element_type="widget" data-settings="{&amp;quot;_animation_mobile&amp;quot;:&amp;quot;none&amp;quot;}" data-widget_type="qi_addons_for_mmlayout_button.default">
 				<div class="mmlayout-widget-container">
@@ -633,7 +653,7 @@ body, p, .mmlayout-text-editor {
 		<div class="mmlayout-element mmlayout-element-49485bb e-con-full e-flex e-con e-child" data-id="49485bb" data-element_type="container">
 				<div class="mmlayout-element mmlayout-element-589fa4c mmlayout-widget__width-initial mmlayout-widget mmlayout-widget-text-editor" data-id="589fa4c" data-element_type="widget" data-widget_type="text-editor.default">
 				<div class="mmlayout-widget-container">
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>								</div>
+									<p>We provide expert care to restore your mobility and improve your quality of life.</p>								</div>
 				</div>
 				</div>
 				</div>
@@ -642,7 +662,7 @@ body, p, .mmlayout-text-editor {
 				<div class="mmlayout-element mmlayout-element-029339d mmlayout-widget mmlayout-widget-elementskit-heading" data-id="029339d" data-element_type="widget" data-widget_type="elementskit-heading.default">
 				<div class="mmlayout-widget-container">
 					<div class="ekit-wid-con"><div class="ekit-heading elementskit-section-title-wraper text_left   ekit_heading_tablet-   ekit_heading_mobile-"><h3 class="ekit-heading--title elementskit-section-title ">Simple Steps to Start Your Recovery</h3>				<div class="ekit-heading__description">
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+					<p>Our personalized treatment plans are designed to help you achieve optimal physical health.</p>
 				</div>
 			</div></div>				</div>
 				</div>
@@ -664,7 +684,7 @@ body, p, .mmlayout-text-editor {
 				<div class="mmlayout-element mmlayout-element-49c96f5 mmlayout-widget__width-initial mmlayout-widget mmlayout-widget-elementskit-heading" data-id="49c96f5" data-element_type="widget" data-widget_type="elementskit-heading.default">
 				<div class="mmlayout-widget-container">
 					<div class="ekit-wid-con"><div class="ekit-heading elementskit-section-title-wraper text_left   ekit_heading_tablet-   ekit_heading_mobile-"><h3 class="ekit-heading--title elementskit-section-title ">Let us know what you need</h3>				<div class="ekit-heading__description">
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+					<p>Experience compassionate care aimed at treating the root cause of your pain.</p>
 				</div>
 			</div></div>				</div>
 				</div>
@@ -685,7 +705,7 @@ body, p, .mmlayout-text-editor {
 				<div class="mmlayout-element mmlayout-element-a6c6b85 mmlayout-widget__width-initial mmlayout-widget mmlayout-widget-elementskit-heading" data-id="a6c6b85" data-element_type="widget" data-widget_type="elementskit-heading.default">
 				<div class="mmlayout-widget-container">
 					<div class="ekit-wid-con"><div class="ekit-heading elementskit-section-title-wraper text_left   ekit_heading_tablet-   ekit_heading_mobile-"><h3 class="ekit-heading--title elementskit-section-title ">Let us know what you need</h3>				<div class="ekit-heading__description">
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+					<p>Empowering you to live a pain-free life through advanced physiotherapeutic techniques.</p>
 				</div>
 			</div></div>				</div>
 				</div>
@@ -706,7 +726,7 @@ body, p, .mmlayout-text-editor {
 				<div class="mmlayout-element mmlayout-element-d5f3951 mmlayout-widget__width-initial mmlayout-widget mmlayout-widget-elementskit-heading" data-id="d5f3951" data-element_type="widget" data-widget_type="elementskit-heading.default">
 				<div class="mmlayout-widget-container">
 					<div class="ekit-wid-con"><div class="ekit-heading elementskit-section-title-wraper text_left   ekit_heading_tablet-   ekit_heading_mobile-"><h3 class="ekit-heading--title elementskit-section-title ">Start of your therapy session</h3>				<div class="ekit-heading__description">
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+					<p>Dedicated to your well-being, we use evidence-based practices for effective recovery.</p>
 				</div>
 			</div></div>				</div>
 				</div>
@@ -727,7 +747,7 @@ body, p, .mmlayout-text-editor {
 				<div class="mmlayout-element mmlayout-element-7c5c344 mmlayout-widget__width-initial mmlayout-widget mmlayout-widget-elementskit-heading" data-id="7c5c344" data-element_type="widget" data-widget_type="elementskit-heading.default">
 				<div class="mmlayout-widget-container">
 					<div class="ekit-wid-con"><div class="ekit-heading elementskit-section-title-wraper text_left   ekit_heading_tablet-   ekit_heading_mobile-"><h3 class="ekit-heading--title elementskit-section-title ">Well-being, freedom of movement</h3>				<div class="ekit-heading__description">
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+					<p>We provide expert care to restore your mobility and improve your quality of life.</p>
 				</div>
 			</div></div>				</div>
 				</div>
@@ -768,7 +788,7 @@ Your Healing Journey</h2>				</div>
 		<div class="mmlayout-element mmlayout-element-fef53a9 e-con-full e-flex e-con e-child" data-id="fef53a9" data-element_type="container">
 				<div class="mmlayout-element mmlayout-element-e7dae62 mmlayout-widget__width-initial mmlayout-widget mmlayout-widget-text-editor" data-id="e7dae62" data-element_type="widget" data-widget_type="text-editor.default">
 				<div class="mmlayout-widget-container">
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>								</div>
+									<p>Our personalized treatment plans are designed to help you achieve optimal physical health.</p>								</div>
 				</div>
 				</div>
 				</div>
@@ -785,7 +805,7 @@ Your Healing Journey</h2>				</div>
 					<h4 class="qodef-m-title">
 					<span class="qodef-m-title-text">Personalized care for you.</span>
 			</h4>
-			<div class="qodef-m-text"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p></div>
+			<div class="qodef-m-text"><p>Experience compassionate care aimed at treating the root cause of your pain.</p></div>
 			</div>
 </div>
 				</div>
@@ -801,7 +821,7 @@ Your Healing Journey</h2>				</div>
 					<h4 class="qodef-m-title">
 					<span class="qodef-m-title-text">Flexible Scheduling Options</span>
 			</h4>
-			<div class="qodef-m-text"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p></div>
+			<div class="qodef-m-text"><p>Empowering you to live a pain-free life through advanced physiotherapeutic techniques.</p></div>
 			</div>
 </div>
 				</div>
@@ -817,7 +837,7 @@ Your Healing Journey</h2>				</div>
 					<h4 class="qodef-m-title">
 					<span class="qodef-m-title-text">Customized Therapy for You</span>
 			</h4>
-			<div class="qodef-m-text"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p></div>
+			<div class="qodef-m-text"><p>Dedicated to your well-being, we use evidence-based practices for effective recovery.</p></div>
 			</div>
 </div>
 				</div>
@@ -835,7 +855,7 @@ Your Healing Journey</h2>				</div>
 					<h4 class="qodef-m-title">
 					<span class="qodef-m-title-text">Safe and Non-Invasive Methods</span>
 			</h4>
-			<div class="qodef-m-text"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p></div>
+			<div class="qodef-m-text"><p>We provide expert care to restore your mobility and improve your quality of life.</p></div>
 			</div>
 </div>
 				</div>
@@ -851,7 +871,7 @@ Your Healing Journey</h2>				</div>
 					<h4 class="qodef-m-title">
 					<span class="qodef-m-title-text">Friendly and Supportive Environment</span>
 			</h4>
-			<div class="qodef-m-text"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p></div>
+			<div class="qodef-m-text"><p>Our personalized treatment plans are designed to help you achieve optimal physical health.</p></div>
 			</div>
 </div>
 				</div>
@@ -946,7 +966,7 @@ Your Healing Journey</h2>				</div>
 				</div>
 				<div class="mmlayout-element mmlayout-element-62659ae mmlayout-widget__width-initial mmlayout-widget-mobile__width-inherit mmlayout-widget mmlayout-widget-text-editor" data-id="62659ae" data-element_type="widget" data-widget_type="text-editor.default">
 				<div class="mmlayout-widget-container">
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>								</div>
+									<p>Experience compassionate care aimed at treating the root cause of your pain.</p>								</div>
 				</div>
 				<div class="mmlayout-element mmlayout-element-ff6553a mmlayout-widget-mobile__width-inherit mmlayout-widget mmlayout-widget-qi_addons_for_mmlayout_button" data-id="ff6553a" data-element_type="widget" data-settings="{&amp;quot;_animation_mobile&amp;quot;:&amp;quot;none&amp;quot;}" data-widget_type="qi_addons_for_mmlayout_button.default">
 				<div class="mmlayout-widget-container">
